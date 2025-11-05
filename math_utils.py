@@ -1,12 +1,12 @@
 import math
 def find_max_number(num1, num2, num3):
     pass  # Replace 'pass' with code
-    if num1 > num2 and num3:
-        return (num1)
-    elif num2 > num3:
-        return (num2)
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num3:
+        return num2
     else:
-        return (num3)
+        return num3
 num1 = 1
 num2 = 3
 num3 = -1
@@ -28,8 +28,7 @@ def find_mean_std(num1, num2, num3):
     mean = find_mean(num1, num2, num3)
     pass  # Replace 'pass' with code
     n = 3
-    sum = num1 + num2 + num3
-    sum2 = (sum - num1) ** 2 + (sum - num2) ** 2 + (sum - num3) ** 2
+    sum2 = (num1 - mean) ** 2 + (num2 - mean) ** 2 + (num3 - mean) ** 2
     sum3 = (sum2/n) ** 0.5
     return (mean , sum3)
 num1 = 1
